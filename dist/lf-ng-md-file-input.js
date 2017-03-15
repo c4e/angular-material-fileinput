@@ -161,7 +161,7 @@
                     '<md-button ng-disabled="isDisabled" ng-click="openDialog($event, this)" class="md-raised md-primary lf-ng-md-file-input-button lf-ng-md-file-input-button-brower" >',
                         '<md-icon class="lf-icon" ng-class="strBrowseIconCls"></md-icon> ',
                         '{{strCaptionBrowse}}',
-                        '<input type="file" aria-label="{{strAriaLabel}}" accept="{{accept}}" ng-disabled="isDisabled" class="lf-ng-md-file-input-tag" />',
+                        '<input type="file" aria-label="{{strAriaLabel}}" id="{{id}}" accept="{{accept}}" ng-disabled="isDisabled" class="lf-ng-md-file-input-tag" />',
                     '</md-button>',
                 '</div>',
             '</div>'
@@ -356,6 +356,7 @@
                 lfOnFileClick: '=?',
                 lfOnFileRemove: '=?',
                 accept:'@?',
+		id:'@?',
                 ngDisabled:'=?'
             },
             link: function(scope,element,attrs,ctrl){
